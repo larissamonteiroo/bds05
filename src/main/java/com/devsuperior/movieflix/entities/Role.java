@@ -31,13 +31,13 @@ public class Role implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	public String getAutority() {
+
+	public String getAuthority() {
 		return authority;
 	}
-	
-	public void setAutority(String autority) {
-		this.authority = autority;
+
+	public void setAuthority(String authority) {
+		this.authority = authority;
 	}
 
 	@Override

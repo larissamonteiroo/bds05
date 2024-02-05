@@ -83,7 +83,7 @@ public class User implements UserDetails, Serializable {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAutority()))
+		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAuthority()))
 				.collect(Collectors.toList());
 	}
 
@@ -131,7 +131,7 @@ public class User implements UserDetails, Serializable {
 
 	public boolean hasHole(String roleName) {
 		for (Role role : roles) {
-			if (role.getAutority().equals(roleName)) {
+			if (role.getAuthority().equals(roleName)) {
 				return true;
 			}
 		}
